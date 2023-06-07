@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11024AAD2A30939300E8C54A /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11024AAC2A30939300E8C54A /* VideoRecorder.swift */; };
 		1194400D2A3059EC0033219F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194400C2A3059EC0033219F /* AppDelegate.swift */; };
 		1194400F2A3059EC0033219F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1194400E2A3059EC0033219F /* SceneDelegate.swift */; };
-		119440112A3059EC0033219F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119440102A3059EC0033219F /* ViewController.swift */; };
-		119440142A3059EC0033219F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119440122A3059EC0033219F /* Main.storyboard */; };
 		119440162A3059EE0033219F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 119440152A3059EE0033219F /* Assets.xcassets */; };
 		119440192A3059EE0033219F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119440172A3059EE0033219F /* LaunchScreen.storyboard */; };
+		119440232A305A930033219F /* VideoCameraViewImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119440222A305A930033219F /* VideoCameraViewImpl.swift */; };
+		119440252A305ABA0033219F /* VideoCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119440242A305ABA0033219F /* VideoCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11024AAC2A30939300E8C54A /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
 		119440092A3059EC0033219F /* VideoRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1194400C2A3059EC0033219F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1194400E2A3059EC0033219F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		119440102A3059EC0033219F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		119440132A3059EC0033219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		119440152A3059EE0033219F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		119440182A3059EE0033219F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1194401A2A3059EE0033219F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119440222A305A930033219F /* VideoCameraViewImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCameraViewImpl.swift; sourceTree = "<group>"; };
+		119440242A305ABA0033219F /* VideoCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		1194400B2A3059EC0033219F /* VideoRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				1194400C2A3059EC0033219F /* AppDelegate.swift */,
-				1194400E2A3059EC0033219F /* SceneDelegate.swift */,
-				119440102A3059EC0033219F /* ViewController.swift */,
-				119440122A3059EC0033219F /* Main.storyboard */,
+				119440202A305A3D0033219F /* App */,
+				119440212A305A560033219F /* VideoCamera */,
 				119440152A3059EE0033219F /* Assets.xcassets */,
 				119440172A3059EE0033219F /* LaunchScreen.storyboard */,
 				1194401A2A3059EE0033219F /* Info.plist */,
 			);
 			path = VideoRecorder;
+			sourceTree = "<group>";
+		};
+		119440202A305A3D0033219F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1194400C2A3059EC0033219F /* AppDelegate.swift */,
+				1194400E2A3059EC0033219F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		119440212A305A560033219F /* VideoCamera */ = {
+			isa = PBXGroup;
+			children = (
+				119440222A305A930033219F /* VideoCameraViewImpl.swift */,
+				119440242A305ABA0033219F /* VideoCameraViewController.swift */,
+				11024AAC2A30939300E8C54A /* VideoRecorder.swift */,
+			);
+			path = VideoCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +146,6 @@
 			files = (
 				119440192A3059EE0033219F /* LaunchScreen.storyboard in Resources */,
 				119440162A3059EE0033219F /* Assets.xcassets in Resources */,
-				119440142A3059EC0033219F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119440112A3059EC0033219F /* ViewController.swift in Sources */,
+				119440232A305A930033219F /* VideoCameraViewImpl.swift in Sources */,
+				119440252A305ABA0033219F /* VideoCameraViewController.swift in Sources */,
+				11024AAD2A30939300E8C54A /* VideoRecorder.swift in Sources */,
 				1194400D2A3059EC0033219F /* AppDelegate.swift in Sources */,
 				1194400F2A3059EC0033219F /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		119440122A3059EC0033219F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				119440132A3059EC0033219F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		119440172A3059EE0033219F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,9 +307,11 @@
 				DEVELOPMENT_TEAM = 54QQ5J8QD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoRecorder/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission on uses camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need your permission to save video in gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,9 +337,11 @@
 				DEVELOPMENT_TEAM = 54QQ5J8QD7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoRecorder/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission on uses camera";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need your permission to save video in gallery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
