@@ -33,8 +33,8 @@ final class VideoCameraViewController: UIViewController {
         
         let previewLayer = videoRecorder.privewLayer()
         DispatchQueue.main.async {
+            previewLayer.frame = self.view.bounds
             self.view.layer.insertSublayer(previewLayer, at: 0)
-            previewLayer.frame = self.mainBounds
         }
     }
 }
