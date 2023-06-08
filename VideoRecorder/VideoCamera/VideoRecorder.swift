@@ -38,8 +38,9 @@ final class VideoRecorder: NSObject,
     // MARK: - Start recoding
     func startRecording(isRecording: Bool) {
         self.isRecording = isRecording
+        guard !fileOutput.isRecording else { return }
         guard let outputUrl = FileManager.default.urls(for: .documentDirectory,
-                                                       in: .userDomainMask).first?.appendingPathComponent("output.mov") else {
+                                                       in: .userDomainMask).first?.appendingPathComponent("\(Date()).mov") else {
             return
         }
         

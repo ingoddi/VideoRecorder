@@ -13,7 +13,7 @@ final class VideoCameraViewController: UIViewController {
     private let mainBounds = UIScreen.main.bounds
     private var width: CGFloat?
     private var height: CGFloat?
-
+    
     // MARK: - Lifecycle
     override func loadView() {
         
@@ -26,14 +26,10 @@ final class VideoCameraViewController: UIViewController {
         
         self.width = mainBounds.width
         self.height = mainBounds.height
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
         let previewLayer = videoRecorder.privewLayer()
         DispatchQueue.main.async {
-            previewLayer.frame = self.view.bounds
+            previewLayer.frame = self.mainBounds
             self.view.layer.insertSublayer(previewLayer, at: 0)
         }
     }
